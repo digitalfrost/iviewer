@@ -1,4 +1,4 @@
-This is a fork of http://wiki.github.com/can3p/iviewer which makes the click function independent of the drag function so that the click function isn't triggered at the end of a drag.
+This is a fork of http://github.com/can3p/iviewer which makes the click function independent of the drag function so that the click function isn't triggered at the end of a drag.
 
 Jquery.iviewer plugin allows to view image in selected div with zoom controls and
 possibility to move image in area by mouse. 

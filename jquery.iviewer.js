@@ -99,6 +99,7 @@
         this.dx = 0; 
         this.dy = 0;
         this.dragged = false;
+				this.cancel_click =false;
         
         this.settings = $.extend({}, defaults, o || {});
         this.current_zoom = this.settings.zoom;
@@ -514,6 +515,9 @@
                 var lleft = e.pageX -this.dx;
                 
                 this.setCoords(lleft, ltop);
+
+								this.cancel_click=true;
+
                 return false;
             }
         },
@@ -529,8 +533,12 @@
         
         click: function(e)
         {
-            this.settings.onClick && 
+              if (this.cancel_click == true){
+										this.cancel_click = false;
+							}else{
+            				this.settings.onClick && 
                     this.settings.onClick.call(this,this.getMouseCoords(e));
+							}
         },
         
         /**
