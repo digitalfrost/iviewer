@@ -1,0 +1,5 @@
+# Ignore other temp files
+~*
+# Gedit temp files
+*~
+
